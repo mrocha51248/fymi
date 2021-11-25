@@ -9,3 +9,14 @@
     --black: #010101;
     background-color: var(--backgroundColor);
 }
+
+.logo-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.logo-image {
+    width: 5rem;
+    height: 5rem;
+}
