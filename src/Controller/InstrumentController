@@ -6,6 +6,7 @@ use App\Model\InstrumentManager;
 
 class InstrumentController extends AbstractController
 {
+
     public function index(): string
     {
         $instrumentManager = new InstrumentManager();
@@ -13,4 +14,5 @@ class InstrumentController extends AbstractController
 
         return $this->twig->render('Instruments/instrumentslist.html.twig', ['instruments' => $instruments]);
     }
+    
 }
