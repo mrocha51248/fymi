@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Controller;
+
+use App\Model\InstrumentManager;
+
+class InstrumentController extends AbstractController
+{
+    /**
+     * List items
+     */
+    public function index(): string
+    {
+        $instrumentManager = new InstrumentManager();
+        $instruments = $instrumentManager->selectAll('title');
+
+        return $this->twig->render('Item/index.html.twig', ['instruments' => $instruments]);
+    }
+}
