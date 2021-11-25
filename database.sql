@@ -41,6 +41,7 @@ CREATE TABLE `tag` (
 CREATE TABLE `instrument_tag` (
   `tag_id` INT UNSIGNED NOT NULL,
   `instrument_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY(tag_id, instrument_id),
   FOREIGN KEY(tag_id) REFERENCES tag(id),
   FOREIGN KEY(instrument_id) REFERENCES instrument(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
