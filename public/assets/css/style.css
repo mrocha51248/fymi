@@ -108,6 +108,10 @@ body {
 }
 
 .instrument-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     width:45%;
     margin-left: 3rem;
