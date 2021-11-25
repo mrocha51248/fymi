@@ -139,6 +139,8 @@ body {
 /* ---------------css results by instruments ------------------*/
 .tracks-results h1 {
     color: var(--primaryColorAlter);
+    text-align: center;
+    margin-bottom: 3rem;
 }
 .tracks-list { 
     display: flex;
@@ -148,8 +150,25 @@ body {
 }
 .tracks-list a {
     display: block;
+    font-size:large;
     text-decoration: none;
     color: var(--primaryColor);
-    margin-top: 3rem;    
+    padding-top: 1rem;
+    padding-left: 1rem;    
+}
+.tracks-list p {
+    display: block;
+    text-decoration: none;
+    padding-left: 1rem;    
+}
+.track-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--secondaryColor);
+    min-width: 80vw;
+    justify-content: center;
+    margin-bottom: 3rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.644);
 }
 /*------------------end css results by instruments---------------*/
