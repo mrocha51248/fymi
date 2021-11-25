@@ -20,3 +20,40 @@
     width: 5rem;
     height: 5rem;
 }
+
+.home-logo {     
+    display: flex;
+    justify-content: center;
+}
+
+.home-content { 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-content a { 
+    text-decoration: none;
+    color: var(--primaryColor);
+}
+
+.find-instrument,
+.find-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-shadow: 1px 1px 7px black;
+}
+
+.find-instrument {
+    background-image: url("../images/find-instrument.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.find-track {
+    background-image: url("../images/find-track.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
