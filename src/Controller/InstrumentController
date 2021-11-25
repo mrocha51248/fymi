@@ -11,6 +11,6 @@ class InstrumentController extends AbstractController
         $instrumentManager = new InstrumentManager();
         $instruments = $instrumentManager->selectAll('id');
 
-        return $this->twig->render('Instrument/instrumentlist.html.twig', ['instruments' => $instruments]);
+        return $this->twig->render('Instrument/list.html.twig', ['instruments' => $instruments]);
     }
 }
