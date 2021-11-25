@@ -15,10 +15,16 @@ class InstrumentController extends AbstractController
         return $this->twig->render('Instrument/list.html.twig', ['instruments' => $instruments]);
     }
 
-    public function results(): string
+    public function result(): string
     {
-        $tracks = LastFmApi::tagGetTopTracks("rock");
+        $tracks = [];
+        $instrumentManager = new InstrumentManager();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $foundIds = array_keys($_POST);
+            $tags = $instrumentManager->selectTagFromInstrument(intval($foundIds[0]));
+            $tracks = LastFmApi::tagGetTopTracks($tags[0]);
+        }
 
-        return $this->twig->render('Instrument/results.html.twig', ['tracks' => $tracks]);
+        return $this->twig->render('instrument/results.html.twig', ['tracks' => $tracks]);        
     }
 }
