@@ -14,5 +14,6 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'instrument' => ['InstrumentController', 'index'],
+    'instrument/results' => ['InstrumentController', 'results'],
 
 ];
