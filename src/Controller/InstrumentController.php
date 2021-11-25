@@ -21,7 +21,9 @@ class InstrumentController extends AbstractController
         $instrumentManager = new InstrumentManager();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $foundIds = array_keys($_POST);
-            if (empty($foundIds)) return $this->twig->render('Instrument/results.html.twig');
+            if (empty($foundIds)) {
+                return $this->twig->render('Instrument/results.html.twig');
+            }
             $tags = $instrumentManager->selectTagFromInstrument(intval($foundIds[0]));
             $tracks = LastFmApi::tagGetTopTracks($tags[0]['name']);
         }
