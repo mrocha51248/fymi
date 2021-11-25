@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Model\InstrumentManager;
 use App\Service\LastFmApi;
+
 class InstrumentController extends AbstractController
 {
     public function index(): string
