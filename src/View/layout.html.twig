@@ -8,11 +8,15 @@
     <title>{% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap" rel="stylesheet">
     {% block stylesheet %}{% endblock %}
     <link rel="icon" href="/assets/images/favicon.png">
 </head>
 
 <body>
+    {% block homeButton %}{% include "Home/_button.html.twig" %}{% endblock %}
     {% block content %}{% endblock %}
     {% block javascript %}{% endblock %}
 </body>
