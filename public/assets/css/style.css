@@ -10,6 +10,11 @@
     background-color: var(--backgroundColor);
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
 .logo-button {
     position: fixed;
     bottom: 0;
@@ -35,13 +40,15 @@
 .home-content a { 
     text-decoration: none;
     color: var(--primaryColor);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .find-instrument,
 .find-track {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-grow: 1;
     text-shadow: 1px 1px 7px black;
 }
