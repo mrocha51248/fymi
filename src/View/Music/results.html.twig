@@ -4,17 +4,18 @@
 {% endblock %}
 
 {% block content %}
-    <div class="home-content">
-        <h1 class="t">
-        
-        <div class="home-logo">
-            <img class="logo-image" src="assets/images/logo_fymi.png">
-        </div>
-
-        <div class="find-track">
-            <a href="/music">
-                <h1>Find your track</h1>
-            </a>
-        </div>
+    <div class="music-results-content">
+    {#  for test  #}
+    <h1>YOU SHOULD LEARN THESE INSTRUMENTS</h1>
+    <div class="music-results-figure">
+        <h2 class="music-results-h2">bass guitar</h2>
+        <img class="music-results-image" src="assets/images/bass_image.jpg">
+    </div>
+    {#  END for test  #}
+    {% for instrument in instruments %}
+        <figure class="music-results-figure">
+            <h2 class="music-results-h2">instrument.name</h2>
+            <img class="music-results-image" src="{{ instrument.image }}">
+        </figure>
     </div>
 {% endblock %}
