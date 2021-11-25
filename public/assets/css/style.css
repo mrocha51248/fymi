@@ -172,3 +172,17 @@ body {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.644);
 }
 /*------------------end css results by instruments---------------*/
+
+/* ---------------css results by musics ------------------*/
+
+.music-results-content h1 {
+    color: var(--primaryColorAlter);
+    text-align: center;
+}
+
+.music-results-h2 {
+    color: var(--primaryColor);
+    text-align: center;
+}
+
+/*------------------end css results by musics---------------*/
