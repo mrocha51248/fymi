@@ -14,6 +14,7 @@ body {
     padding: 0;
     margin: 0;
 }
+/* Homepage */
 
 .logo-button {
     position: fixed;
@@ -64,3 +65,41 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* End Homepage */
+
+/* Instrument List*/
+
+.instrument-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.instrument-choice h1 {
+    color: var(--primaryColor);
+}
+
+.instrument-form {
+    background-color: var(--secondaryColor);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90vw;
+}
+
+.background-portee {
+    background-image: url(../images/portee.png);
+    height: 15vh;
+    width: 30vw;
+}
+
+.instrument-input:checked+.instrument-label {
+    border-color: var(--secondaryColorAlter);
+}
+
+.instrument-icon {
+    height: 10vh;
+    border-radius: 50%;
+}
+/* End Instrument List*/
