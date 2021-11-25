@@ -74,32 +74,64 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100%;
 }
 
 .instrument-choice h1 {
     color: var(--primaryColor);
+    font-size: 3rem;
+    text-align: center;
 }
 
 .instrument-form {
     background-color: var(--secondaryColor);
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 90vw;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .background-portee {
     background-image: url(../images/portee.png);
-    height: 15vh;
-    width: 30vw;
+    background-size: cover;
+    height: 10rem;
+    width: 10rem;
+    flex-grow: 1;
 }
 
 .instrument-input:checked+.instrument-label {
-    border-color: var(--secondaryColorAlter);
+    background-color: #e2dfdf6b;
+    border: 3px solid;
+    border-color: #e2dfdf6b;
+}
+
+.instrument-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width:45%;
+    margin-left: 3rem;
 }
 
 .instrument-icon {
     height: 10vh;
     border-radius: 50%;
+}
+
+.submit-selected-instruments {
+    background-color: rgb(236, 236, 236);
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    position: fixed;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.363);
+    border: none;
 }
 /* End Instrument List*/
