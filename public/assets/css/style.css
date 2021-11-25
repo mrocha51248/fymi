@@ -1,0 +1,11 @@
+:root {
+    font-family: 'Outfit', sans-serif;
+    --backgroundColor: #212227;
+    --primaryColor: #B4E4E4;
+    --primaryColorAlter: #F4CDD3;
+    --secondaryColor:#297373;
+    --secondaryColorAlter:#E37884;
+    --white: #fefee2;
+    --black: #010101;
+    background-color: var(--backgroundColor);
+}
