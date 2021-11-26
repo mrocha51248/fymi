@@ -14,6 +14,7 @@ body {
     padding: 0;
     margin: 0;
 }
+
 /* Homepage */
 
 .logo-button {
@@ -27,18 +28,18 @@ body {
     height: 5rem;
 }
 
-.home-logo {     
+.home-logo {
     display: flex;
     justify-content: center;
 }
 
-.home-content { 
+.home-content {
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.home-content a { 
+.home-content a {
     text-decoration: none;
     color: var(--primaryColor);
     width: 100%;
@@ -208,3 +209,66 @@ body {
 }
 
 /*------------------end css results by musics---------------*/
+
+/* ---------------css basket ------------------*/
+
+.basket {
+    display: none;
+}
+
+.basket:target {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--backgroundColor);
+    padding: 2rem;
+}
+
+.basket a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.basket a:visited {
+    color: var(--black);
+}
+
+.basket-close {
+    align-self: flex-end;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.basket-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.basket-div h1 {
+    align-self: center;
+}
+
+.basket form {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.basket-content {
+    margin: 1rem;
+    font-size: large;
+    color: var(--primaryColor);
+}
+
+/*------------------end basket---------------*/

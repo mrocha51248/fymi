@@ -2,7 +2,7 @@
 
 {% block content %}
 <main>
-    <form action="/music" method="post">
+    <form action="/music#basket" method="post">
         {% for key, result in results %}
             <div>
                 <input type="checkbox" name="{{ key }}" id="{{ key }}">
