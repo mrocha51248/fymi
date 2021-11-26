@@ -178,6 +178,10 @@ body {
     margin-bottom: 3rem;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.644);
 }
+
+.track-link a {
+    overflow: hidden;
+}
 /*------------------end css results by instruments---------------*/
 
 /* ---------------css results by musics ------------------*/
@@ -255,6 +259,7 @@ body {
 .search-music-label {
     width: 100%;
     display: block;
+    overflow: hidden;
 }
 
 .search-music-input:checked+.search-music-label-div {
@@ -352,6 +357,10 @@ body {
     margin: 1rem;
     font-size: 1.5rem;
     color: var(--primaryColor);
+}
+
+.basket-content p {
+    overflow: hidden;
 }
 
 .basket-content p a {
