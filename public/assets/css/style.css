@@ -272,3 +272,53 @@ body {
 }
 
 /*------------------end basket---------------*/
+/*------------------css Music----------------*/
+
+.main-track {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.validate-music-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-selected-music {
+    margin: 5rem;
+}
+
+.basket-button {
+    display: flex;
+    position:fixed;
+    right: 0;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--secondaryColor);
+    padding: 0.5rem;
+    border-radius: 100%;
+}
+
+.basket-button a {
+    background-image: url(../images/mainboard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+
+}
+
+.basket-notification {
+    margin: 0.5rem;
+    background-color: red;
+    border-radius: 100%;
+}
