@@ -119,9 +119,11 @@ class MusicController extends AbstractController
                 $instruments[$id]['score'] = ($instruments[$id]['score'] ?? 0) + $weight;
             }
         }
-        $totalScore = array_sum(array_column($instruments, 'score'));
+
         $scores = array_column($instruments, 'score');
         array_multisort($scores, SORT_DESC, $instruments);
+        // $totalScore = array_sum(array_column($instruments, 'score'));
+        $totalScore = $scores[0];
         return $this->twig->render(
             'Music/results.html.twig',
             ['instruments' => $instruments, 'totalScore' => $totalScore]

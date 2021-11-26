@@ -7,7 +7,9 @@
         {% for instrument in instruments %}
             <figure class="music-results-instrument">
                 <h2 class="music-results-h2">{{ instrument.data.name }}</h2>
-                <img class="music-results-image" src="{{ instrument.data.image }}">
+                <div class="music-results-image" style="background-image: url('{{ instrument.data.image }}');">
+                    <span>{{ ((instrument.score * 100) /  totalScore)|round }} %</span>
+                </div>
             </figure>
         {% endfor %}
         </div>
