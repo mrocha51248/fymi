@@ -90,7 +90,7 @@ class MusicController extends AbstractController
             'albums' => [],
             'artists' => [],
         ];
-        //$_SESSION = [];
+        $_SESSION = [];
         $tags = [];
         foreach ($basket['tracks'] as $track) {
             foreach (LastFmApi::trackGetTags($track['artist'], $track['name']) as $tag) {
