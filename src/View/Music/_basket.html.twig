@@ -6,7 +6,7 @@
         <h1>Tracks</h1>
         <div class="basket-content">
             {% for key, track in basket.tracks %}  
-                <p><a href="/music?remove=track&id={{ key }}#basket">🗑</a>     | {{track.name}}</p>  
+                <p><a href="/music?remove=track&id={{ key }}#basket">🗑</a> {{track.name}}</p>  
             {% endfor %}
         </div>
     </div>
@@ -14,7 +14,7 @@
         <h1>Albums</h1>
         <div class="basket-content">
             {% for key, album in basket.albums %}
-                <p><a href="/music?remove=track&id={{ key }}#basket">🗑</a>     | {{album.name}}</p>    
+                <p><a href="/music?remove=track&id={{ key }}#basket">🗑</a> {{album.name}}</p>    
             {% endfor %}
         </div>
     </div>
@@ -22,7 +22,7 @@
         <h1>Artists</h1>
         <div class="basket-content">
             {% for key, artist in basket.artists %} 
-                <p><a href="/music?remove=track&id={{ key }}#basket">🗑</a>     | {{artist.name}}</p>    
+                <p><a href="/music?remove=track&id={{ key }}#basket">🗑</a> {{artist.name}}</p>    
             {% endfor %}
         </div>
     </div>
