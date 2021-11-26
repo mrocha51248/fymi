@@ -32,7 +32,7 @@ class LastFmApi
         return $content['results']['trackmatches']['track'] ?? [];
     }
 
-    public static function searchAlbum(string $name): array
+    public static function searchAlbums(string $name): array
     {
         $url =
             self::HOST_NAME . '/2.0/?method=album.search' .
@@ -44,7 +44,7 @@ class LastFmApi
         return $content['results']['albummatches']['album'] ?? [];
     }
 
-    public static function searchArtist(string $name): array
+    public static function searchArtists(string $name): array
     {
         $url =
             self::HOST_NAME . '/2.0/?method=artist.search' .
