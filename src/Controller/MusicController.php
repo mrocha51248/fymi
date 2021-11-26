@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Service\LastFmApi;
+use App\Model\TagManager;
 
 class MusicController extends AbstractController
 {
@@ -40,6 +41,7 @@ class MusicController extends AbstractController
         $_SESSION['search'] = $results;
         return $this->twig->render('Music/search.html.twig', [
             'results' => $results,
+            'search' => trim($_POST['text']),
         ]);
     }
 
@@ -106,17 +108,25 @@ class MusicController extends AbstractController
             }
         }
 
-        //TODO
-        // $instruments = [];
-        // foreach ($tags as $tag => $weight) {
-        //     foreach ($model->getInstrumentsForTag($tag) as $instrument) {
-        //         $id = $instrument['id'];
-        //         $instruments[$id] = $instruments[$id] ?? [];
-        //         $instruments[$id]['data'] = $instrument;
-        //         $instruments[$id]['score'] = ($instruments[$id]['score'] ?? 0) + $weight;
-        //     }
-        // }
-        // $totalScore = array_sum(array_column($instrument, 'score'));
-        //render(results.twig, $instruments, $totalScore)
+
+        $instruments = [];
+        $tagManager = new TagManager();
+        foreach ($tags as $tag => $weight) {
+            foreach ($tagManager->selectInstrumentFromTag($tag) as $instrument) {
+                $id = $instrument['id'];
+                $instruments[$id] = $instruments[$id] ?? [];
+                $instruments[$id]['data'] = $instrument;
+                $instruments[$id]['score'] = ($instruments[$id]['score'] ?? 0) + $weight;
+            }
+        }
+
+        $scores = array_column($instruments, 'score');
+        array_multisort($scores, SORT_DESC, $instruments);
+        // $totalScore = array_sum(array_column($instruments, 'score'));
+        $totalScore = $scores[0];
+        return $this->twig->render(
+            'Music/results.html.twig',
+            ['instruments' => $instruments, 'totalScore' => $totalScore]
+        );
     }
 }

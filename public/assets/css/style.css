@@ -82,6 +82,7 @@ body {
     color: var(--primaryColor);
     font-size: 3rem;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .instrument-form {
@@ -92,6 +93,8 @@ body {
     justify-content: center;
     width: 100%;
     min-height: 100vh;
+    box-shadow:0 0 8px black;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
 }
 
 .background-portee {
@@ -141,7 +144,9 @@ body {
 .tracks-results h1 {
     color: var(--primaryColorAlter);
     text-align: center;
-    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.644);
 }
 .tracks-list { 
     display: flex;
@@ -192,23 +197,87 @@ body {
 .music-results-instrument {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: var(--secondaryColor);
-    max-width: 80vw;
-    justify-content: center;
+    width: 80vw;
     margin-bottom: 3rem;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.644);
 }
 .music-results-h2 {
-    display: flex;
     align-self: center;
     font-size:large;
     text-decoration: none;
     color: var(--primaryColor);
     padding-left: 1rem;    
 }
+.music-results-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14rem;
+    width: 100%;
+    background-size:cover;
+    font-size: 7rem;
+    color: var(--primaryColor);
+    text-shadow: 5px 5px 5px var(--black);
+}
 
 /*------------------end css results by musics---------------*/
+
+
+/* music choice form*/
+.search-music-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.search-music-main h1 {
+    color: var(--primaryColorAlter);
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.644);
+}
+.search-music {
+    display: flex;
+    justify-content: center;
+}
+.search-music-label-div {
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    width: 60vw;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.363);
+    font-size: 1.5rem;
+}
+
+.search-music-label {
+    width: 100%;
+    display: block;
+}
+
+.search-music-input:checked+.search-music-label-div {
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    padding: 1.5rem;
+    display:flex;
+    flex-grow:1;
+}
+
+.save-button {
+    background-color: var(--primaryColor);
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    position: fixed;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.363);
+    border: none;
+}
+
+/* end music choice form*/
 
 /* ---------------css basket ------------------*/
 
@@ -239,15 +308,24 @@ body {
 }
 
 .basket-close {
-    align-self: flex-end;
-    width: 2rem;
-    height: 2rem;
+    position: fixed;
+    bottom: 88%;
+    left: 88%;
+    transform: translate(-50%);
+    width: 4rem;
+    height: 4rem;
     border-radius: 100%;
-    background-color: var(--white);
+    background-color: var(--primaryColor);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    font-size: 4rem;
+    box-shadow: 0px 0px 15px 2px var(--backgroundColor);
+}
+
+.basket-close a {
+    margin-bottom: 0.2rem;
 }
 
 .basket-div {
@@ -265,13 +343,23 @@ body {
     margin-top: 5rem;
 }
 
+.basket-artists {
+    margin-bottom: 8rem;
+}
+
 .basket-content {
     margin: 1rem;
-    font-size: large;
+    font-size: 1.5rem;
     color: var(--primaryColor);
 }
 
+.basket-content p a {
+    color: var(--backgroundColor);
+    font-size: 2rem;
+}
+
 /*------------------end basket---------------*/
+
 /*------------------css Music----------------*/
 
 .main-track {
