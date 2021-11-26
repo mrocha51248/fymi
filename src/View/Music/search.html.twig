@@ -3,7 +3,7 @@
 {% block content %}
 <main class="search-music-main">
     <h1>Results for "{{search}}"</h1>
-    <form action="/music" method="post" class="search-music-form">
+    <form action="/music#basket" method="post" class="search-music-form">
         {% for key, result in results %}
             <div class="search-music">
                 <input type="checkbox" name="{{ key }}" id="{{ key }}" class="search-music-input" hidden>
