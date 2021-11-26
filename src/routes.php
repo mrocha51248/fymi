@@ -14,5 +14,7 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'instrument' => ['InstrumentController', 'index'],
-
+    'music' => ['MusicController', 'index', ['remove', 'id']],
+    'music/search' => ['MusicController', 'search'],
+    'music/results' => ['MusicController', 'results'],
 ];
