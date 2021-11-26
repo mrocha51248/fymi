@@ -385,8 +385,9 @@ body {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    margin: auto;
 }
+
 .validate-music-search {
     display: flex;
     flex-direction: column;
