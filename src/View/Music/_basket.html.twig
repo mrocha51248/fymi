@@ -1,0 +1,17 @@
+<div id="basket" class="basket">
+    <h5>Tracks</h5>
+    {% for key, track in basket.tracks %}
+        <p>{{track.name}} <a href="/music?remove=track&id={{ key }}">Remove</a></p>    
+    {% endfor %}
+    <h5>Albums</h5>
+    {% for key, album in basket.albums %}
+        <p>{{album.name}} <a href="/music?remove=album&id={{ key }}">Remove</a></p>    
+    {% endfor %}
+    <h5>Artists</h5>
+    {% for key, artist in basket.artists %}
+        <p>{{artist.name}} <a href="/music?remove=artist&id={{ key }}">Remove</a></p>    
+    {% endfor %}
+    <form action="/music/results">
+        <button type="submit">Find instruments</button>
+    </form>
+</div>

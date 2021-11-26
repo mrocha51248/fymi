@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<main>
+    <form action="/music/search" method="post">
+        <input type="text" name="text">
+        <div>
+            <input type="checkbox" name="tracks" id="tracks" checked>
+            <label for="tracks">Tracks</label>
+            <input type="checkbox" name="albums" id="albums" checked>
+            <label for="albums">Albums</label>
+            <input type="checkbox" name="artists" id="artists" checked>
+            <label for="artists">Artists</label>
+        </div>
+        <button type="submit">Search</button>
+    </form>
+</main>
+<div class="basket-button">
+    <a href="#basket"><span class="basket-notification">{{ basketCount }}</span></a>
+</div>
+{% include "Music/_basket.html.twig" %}
+{% endblock %}
