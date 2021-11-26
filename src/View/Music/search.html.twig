@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<main>
+    <form action="/music" method="post">
+        {% for key, result in results %}
+            <div>
+                <input type="checkbox" name="{{ key }}" id="{{ key }}">
+                <label for="{{ key }}">{{ result.data.name }}</label>
+            </div>
+        {% endfor %}
+        <button type="submit">Save</button>
+    </form>
+</main>
+{% endblock %}
