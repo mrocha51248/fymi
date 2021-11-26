@@ -360,3 +360,87 @@ body {
 
 /*------------------end basket---------------*/
 
+/*------------------css Music----------------*/
+
+.main-track {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.checkbox-container{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.validate-music-search {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.music-searchbar{
+    height: 2rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.363);
+    margin-bottom: 5rem;
+    border: none;
+
+}
+
+.validate-music-search label{
+    color: var(--primaryColor);
+}
+
+.validate-music-search h1{ 
+    font-size: 2rem;
+    color: var(--primaryColor);
+    align-self: center;
+}
+
+.submit-selected-music {
+    margin: 5rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.363);
+    border: none;
+}
+
+
+.basket-button {
+    display: flex;
+    position:fixed;
+    right: 0;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--secondaryColor);
+    padding: 0.5rem;
+    border-radius: 100%;
+}
+
+.basket-button a {
+    background-image: url(../images/mainboard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+
+}
+
+.basket-notification {
+    margin: 0.5rem;
+    background-color: red;
+    border-radius: 100%;
+}

@@ -1,18 +1,25 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-<main>
-    <form action="/music/search" method="post">
-        <input type="text" name="text">
-        <div>
-            <input type="checkbox" name="tracks" id="tracks" checked>
-            <label for="tracks">Tracks</label>
-            <input type="checkbox" name="albums" id="albums" checked>
-            <label for="albums">Albums</label>
-            <input type="checkbox" name="artists" id="artists" checked>
-            <label for="artists">Artists</label>
+<main class="main-track">
+    <form class="validate-music-search" action="/music/search" method="post">
+        <h1>Pick your music</h1>
+        <input class="music-searchbar" type="text" name="text" placeholder="Johnny Hallyday..">
+        <div class="checkbox-container">
+            <div>
+                <input type="checkbox" name="tracks" id="tracks" checked>
+                <label for="tracks">Tracks</label>
+            </div>
+            <div>
+                <input type="checkbox" name="albums" id="albums" checked>
+                <label for="albums">Albums</label>
+            </div>
+            <div>
+                <input type="checkbox" name="artists" id="artists" checked>
+                <label for="artists">Artists</label>
+            </div>
         </div>
-        <button type="submit">Search</button>
+        <button class="submit-selected-music"type="submit">Search</button>
     </form>
 </main>
 <div class="basket-button">
