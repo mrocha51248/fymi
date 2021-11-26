@@ -40,6 +40,7 @@ class MusicController extends AbstractController
         $_SESSION['search'] = $results;
         return $this->twig->render('Music/search.html.twig', [
             'results' => $results,
+            'search' => trim($_POST['text']),
         ]);
     }
 

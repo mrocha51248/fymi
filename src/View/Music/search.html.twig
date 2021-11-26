@@ -1,15 +1,18 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-<main>
-    <form action="/music" method="post">
+<main class="search-music-main">
+    <h1>Results for "{{search}}"</h1>
+    <form action="/music" method="post" class="search-music-form">
         {% for key, result in results %}
-            <div>
-                <input type="checkbox" name="{{ key }}" id="{{ key }}">
-                <label for="{{ key }}">{{ result.data.name }}</label>
+            <div class="search-music">
+                <input type="checkbox" name="{{ key }}" id="{{ key }}" class="search-music-input" hidden>
+                <div class="search-music-label-div">
+                    <label for="{{ key }}" class="search-music-label">{{ result.data.name }}</label>
+                </div>
             </div>
         {% endfor %}
-        <button type="submit">Save</button>
+        <button type="submit" class="save-button">Save</button>
     </form>
 </main>
 {% endblock %}
