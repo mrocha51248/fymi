@@ -49,20 +49,18 @@ CREATE TABLE `instrument_tag` (
 --
 
 INSERT INTO `instrument` (`id`, `name`, `image`, `icon`) VALUES
-(1, 'guitar', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'), 
+(1, 'accoustic guitar', '/assets/images/accoustic_guitar_image.jpg', '/assets/images/accoustic_guitar_icon.png'), 
 (2, 'bass guitar','/assets/images/bass_image.jpg', '/assets/images/bass_icon.png'), 
 (3, 'drums', '/assets/images/drums_image.jpg', '/assets/images/drums_icon.png'),
-(4, 'piano', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'),
-(5, 'synthesizer', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'),
-(6, 'violin', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'),
-(7, 'cello', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'),
-(8, 'trumpet', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'),
-(9, 'saxophone', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'),
-(10, 'tuba', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'),
-(11, 'electric guitar', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'),
-(12, 'double bass', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'),
-(13, 'harpe', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png'),
-(14, 'flute', '/assets/images/guitar_image.jpg', '/assets/images/guitar_icon.png');
+(4, 'piano', '/assets/images/piano_image.jpg', '/assets/images/piano_icon.png'),
+(5, 'synthesizer', '/assets/images/synthesizer_image.jpg', '/assets/images/synthesizer_icon.png'),
+(6, 'violin', '/assets/images/violin_image.jpg', '/assets/images/violin_icon.png'),
+(7, 'cello', '/assets/images/cello_image.jpg', '/assets/images/cello_icon.png'),
+(8, 'trumpet', '/assets/images/trumpet_image.jpg', '/assets/images/trumpet_icon.png'),
+(9, 'saxophone', '/assets/images/saxophone_image.jpg', '/assets/images/saxophone_icon.png'),
+(10, 'electric guitar', '/assets/images/electric_guitar_image.jpg', '/assets/images/electric_guitar_icon.png'),
+(11, 'harpe', '/assets/images/harpe_image.jpg', '/assets/images/harpe_icon.png'),
+(12, 'flute', '/assets/images/flute_image.jpg', '/assets/images/flute_icon.png');
 
 
 INSERT INTO `tag` (`id`, `name`) VALUES 
