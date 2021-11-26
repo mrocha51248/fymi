@@ -12,7 +12,9 @@ class InstrumentController extends AbstractController
         $instrumentManager = new InstrumentManager();
         $instruments = $instrumentManager->selectAll('id');
 
-        return $this->twig->render('Instrument/list.html.twig', ['instruments' => $instruments]);
+        $positions = array_map(fn($x)=>intval(hexdec($x))%8, str_split(md5('azdjszsdazdazadaoizdoa')));
+
+        return $this->twig->render('Instrument/list.html.twig', ['instruments' => $instruments, 'positions' => $positions]);
     }
 
     public function results(): string
