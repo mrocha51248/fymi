@@ -82,6 +82,7 @@ body {
     color: var(--primaryColor);
     font-size: 3rem;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .instrument-form {
@@ -92,6 +93,7 @@ body {
     justify-content: center;
     width: 100%;
     min-height: 100vh;
+    box-shadow:0 0 8px black;
 }
 
 .background-portee {
@@ -141,7 +143,9 @@ body {
 .tracks-results h1 {
     color: var(--primaryColorAlter);
     text-align: center;
-    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.644);
 }
 .tracks-list { 
     display: flex;
@@ -210,6 +214,62 @@ body {
 
 /*------------------end css results by musics---------------*/
 
+
+/* music choice form*/
+.search-music-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.search-music-main h1 {
+    color: var(--primaryColorAlter);
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.644);
+}
+.search-music {
+    display: flex;
+    justify-content: center;
+}
+.search-music-label-div {
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    width: 60vw;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.363);
+    font-size: 1.5rem;
+}
+
+.search-music-label {
+    width: 100%;
+    display: block;
+}
+
+.search-music-input:checked+.search-music-label-div {
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    padding: 1.5rem;
+    display:flex;
+    flex-grow:1;
+}
+
+.save-button {
+    background-color: var(--primaryColor);
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    position: fixed;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.363);
+    border: none;
+}
+
+/* end music choice form*/
+
 /* ---------------css basket ------------------*/
 
 .basket {
@@ -272,3 +332,4 @@ body {
 }
 
 /*------------------end basket---------------*/
+
