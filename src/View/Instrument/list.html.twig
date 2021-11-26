@@ -7,7 +7,7 @@
         {% for instrument in instruments %}
         <div class="background-portee">
             <input type="checkbox" id="{{instrument.id}}" name="{{instrument.id}}" class='instrument-input' hidden>
-            <label class="instrument-label" for="{{instrument.id}}" style="margin-top:{{random(0.1, 5)}}rem;">
+            <label class="instrument-label" for="{{instrument.id}}" style="margin-top:{{positions[loop.index0]}}rem;">
                     <img src="{{instrument.icon}}" class="instrument-icon">
             </label>
         </div>
