@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="music-results-content">
+        <h1>You should learn these instruments</h1>
+        <div class="music-results-list">
+            {#  for test  #}
+            <div class="music-results-instrument">
+                <h2 class="music-results-h2">bass guitar</h2>
+                <img class="music-results-image" src="/assets/images/bass_image.jpg">
+            </div>
+            <div class="music-results-instrument">
+                <h2 class="music-results-h2">guitar</h2>
+                <img class="music-results-image" src="/assets/images/guitar_image.jpg">
+            </div>
+            <div class="music-results-instrument">
+                <h2 class="music-results-h2">drums</h2>
+                <img class="music-results-image" src="/assets/images/drums_image.jpg">
+            </div>
+            {#  END for test  #}
+        {# {% for instrument in instruments %}
+            <figure class="music-results-instrument">
+                <h2 class="music-results-h2">{{ instrument.name }}</h2>
+                <img class="music-results-image" src="{{ instrument.image }}">
+            </figure>
+        {% {% endfor %}} #}
+        </div>
+    </div>
+{% endblock %}

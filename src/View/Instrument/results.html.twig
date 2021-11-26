@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <main class="tracks-results">
+        <h1>Tracks you'll love to learn</h1>
+            <div class="tracks-list">
+                {% for track in tracks %}
+                <div class="track-link">
+                    <a href="{{track.url}}" style="">{{track.name}} ♪</a>
+                    <p>{{track.artist.name}}</p>
+                </div>
+                {% endfor %}
+            </div>
+
+    </main>
+{% endblock content %}

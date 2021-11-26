@@ -3,16 +3,16 @@
 {% block content %}
 <main class="instrument-choice">
     <h1>Pick your instruments</h1>
-    <form class="instrument-form" method ="post">
+    <form class="instrument-form" method ="post" action="/instrument/results">
         {% for instrument in instruments %}
         <div class="background-portee">
-            <label class="instrument-label" for="{{instrument.id}}">
-                <img src="{{instrument.icon}}">
+            <input type="checkbox" id="{{instrument.id}}" name="{{instrument.id}}" class='instrument-input' hidden>
+            <label class="instrument-label" for="{{instrument.id}}" style="margin-top:{{random(0.1, 5)}}rem;">
+                    <img src="{{instrument.icon}}" class="instrument-icon">
             </label>
-            <input type="checkbox" id="{{instrument.id}}">
         </div>
         {% endfor %}
-        <button class="submit-selected-instruments" type="submit">Check this song out !</button>
+        <button class="submit-selected-instruments" type="submit">Go!</button>
     </form>
 </main>
 {% endblock %}
